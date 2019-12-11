@@ -47,11 +47,10 @@ requests 메서드를 통해  가져온 url 데이터를 **BeautifulSoup** 에 �
 
    **매개변수**로 들어갈 값은 
 
-   ![](BeautifulSoup_사용법.assets/selecter.png)
+   ![](./selecter.png)
 
    를 통해 **카피**하고 적용시켜 준다
 
    ```python
    daller = soup.select_one("#exchangeList > li.on > a.head.usd > div > span.value")
    ```
-
