@@ -75,7 +75,7 @@ requests 메서드를 통해  가져온 url 데이터를 **BeautifulSoup** 에 �
    tag_1 = soup.select_one(".subway>li:nth-chlid(1)")
    ```
 
-   ![](BeautifulSoup_사용법.assets/li.png)
+   ![](C:\Users\wjsxo\Desktop\TIL\python\크롤링\li.png)
 
    **만약** subway라는 **클래스**에 **class**나 **id**값이 없는 **li**태그가 3개가 있을때 
 
