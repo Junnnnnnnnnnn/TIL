@@ -68,7 +68,7 @@
 
 >### Servlet 동작 과정
 >
->![](C:\Users\wjsxo\Desktop\TIL\JavaSpring\studyIMG2.png)
+>![](.\studyIMG2.png)
 >
 >1. 사용자가 **URL**을 클릭하면 **HTTP** **Request를** **Servlet** **Container(tomcat)에** 보낸다
 >2. **Servlet** **Container는** **HttpServletRequest**, **HttpServletResponse** 두 객체를 생성한다.
@@ -88,7 +88,7 @@
 
 ### 웹어플리케이션 동작 원리
 
-![](C:\Users\wjsxo\Desktop\TIL\JavaSpring\studyIMG.png)
+![](.\studyIMG.png)
 
 1. 웹 어플리에키션이 실행 되면 -> **Tomcat에** 의해 **web.xml이** 로딩 된다.
 2. **web.xml에** 등록되어 있는 **ContextLoaderListener**(Java Class)가 생성된다. **ContextLoaderListener클래스는** **ServletContextListener** 인터페이스를 구현하고 있으며, **ApplicationContext를** 생성하는 역할을 수행한다.
