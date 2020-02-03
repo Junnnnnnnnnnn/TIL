@@ -68,7 +68,7 @@
 
 >### Servlet 동작 과정
 >
->![](.\studyIMG2.png)
+>![](studyIMG2.png)
 >
 >1. 사용자가 **URL**을 클릭하면 **HTTP** **Request를** **Servlet** **Container(tomcat)에** 보낸다
 >2. **Servlet** **Container는** **HttpServletRequest**, **HttpServletResponse** 두 객체를 생성한다.
