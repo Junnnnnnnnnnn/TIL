@@ -30,7 +30,8 @@ class Add{
 
 ## IOC
 
-- **프로그래머가 객체를 생성**하는 것을 beanFactory에 등록 되어 있는 **bean들의 라이프 사이클**을 관리하고 필요한 객체를 **setter로 주입**하는 **DI(Dependency injection)**역할을 한다
+- IOC는 객체의 생성부터 소멸까지의 객체들을 관리한다. 즉 **bean**의 등록 된 객체들을 관리하기 때문에 **bean들의 라이프 사이클**을 관리한다고도 한다.
+- **프로그래머가 직접 객체를 생성**하는 것을  IOC Container 에서 beanFactory에 등록 되어 있는  필요한 객체를 **setter로 주입**하는 **DI(Dependency injection)**역할을 한다
 
 ![](IOC.png)
 
