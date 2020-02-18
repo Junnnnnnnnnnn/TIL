@@ -26,5 +26,5 @@ a4535d2 branc를 배워봅시다
 3. 브랜치 이동:  `git checkout change` 
 4. 브랜치 이동:  `git checkout change`
 5. 브랜치 삭제:  `git branch -d (브랜치이름)`
-6. 브랜치 생성 + 이동:  `git checkout -d (브랜치이름)`
+6. 브랜치 생성 + 이동:  `git checkout -b (브랜치이름)`
 7. 마스터와 브랜치 병합 : `git marge (브랜치 이름)`
