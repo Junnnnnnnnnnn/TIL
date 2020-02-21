@@ -174,3 +174,17 @@
 6. **DispatcherServlet**(**Servlet**)이 생성된다. **DispatcherServlet은** **FrontController의** 역할을 수행한다. 클라이언트로부터 요청온 메시지를 분석하여 알맞은 **PageController에게** 전달하고 응답을 받아 요청에 따른 **응답을** 어떻게 할지 결정만 한다. 실질적인 작업은  PageController 이루어지기 때문에 이러한 클래스를 HandlerMapping, ViewResolver ndlerMapping, ViewResolver 클래스라고 한다.
 7. **DispatcherServlet**(**Servlet**)은 **servlet**-**context.xml을** 로딩한다.
 8. 두번째 **Spring** **Container가** 구동되며 응답에 맞는 **PageController** 들이 동작한다. 이 때 **첫번째** **Spring** **Container가** 구동되면서  생성된 **DAO**, **BO**, **Servicelmpl** 클래스들과 협업하여 알맞은 작업을 처리하게 된다.
+
+### ORM(객체 - 관계)
+
+- TODO
+  - 정확한 개념
+  - 장점 추가
+  - 예제 코드
+  - AOP란?
+
+- 장점
+  - 공통적인 데이터 접근 예외
+    - **catches** , **throws**, **exception**을 선언 하지 않아도 **DataAccessException**계층을 통해 필요에 따라 예외를 잡아서 처리 할 수 있다.
+  - 통합된 트랜잭션 관리.
+    - `@Transactional` 어노테이션을 사용하거나 **contextConfigLocation**이 개발자가 작성한 로드시키는 **.xml** 설정 파일에 트랜잭션 **AOP** 어드바이스를 명시적으로 설정 함으로써 ORM코드를 감쌀 수 있다. 이 두가지 경우가 트랜잭션의 의미와 예외처리를 개발다 **대신**다뤄준다.
