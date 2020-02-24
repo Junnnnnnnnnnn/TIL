@@ -188,3 +188,15 @@
     - **catches** , **throws**, **exception**을 선언 하지 않아도 **DataAccessException**계층을 통해 필요에 따라 예외를 잡아서 처리 할 수 있다.
   - 통합된 트랜잭션 관리.
     - `@Transactional` 어노테이션을 사용하거나 **contextConfigLocation**이 개발자가 작성한 로드시키는 **.xml** 설정 파일에 트랜잭션 **AOP** 어드바이스를 명시적으로 설정 함으로써 ORM코드를 감쌀 수 있다. 이 두가지 경우가 트랜잭션의 의미와 예외처리를 개발다 **대신**다뤄준다.
+
+
+
+
+
+
+
+### ClassPath
+
+**ClassPath**란 **window** 기준에서 환경설정으로 지정해 줄 수 있다. 
+
+**ClassPath**는 **java** **Spring**의 실행 폴더의 주소로 주로 **spring** 실행시 **mvnw** 파일 경로를 찾을 때 사용 한다.
