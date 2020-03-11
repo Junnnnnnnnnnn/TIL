@@ -3,10 +3,13 @@ package com.example.demo.controller;
 import java.util.List;
 
 import com.example.demo.db.model.LoginInfo;
+import com.example.demo.db.model.Member;
 import com.example.demo.db.service.DBService;
+import com.example.demo.db.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,6 +23,9 @@ public class ProjcetController {
     //만들어 놓은 dbSerivce interface를 IOC에 등록되어 있는 bean을 의존성 주입 해준다.
     @Autowired
     DBService dbService;
+
+    @Autowired
+    UserService userService;
 
     //RESTfull api를 통해  "/" url으로 GET 메서드가 들어왔을때 실행하는 함수이다.
     //에러가 뜰 시 Exception을 통해 예외 처리를 해준다.
@@ -37,6 +43,16 @@ public class ProjcetController {
     @RequestMapping(value="/2", method=RequestMethod.GET)
     public @ResponseBody List<LoginInfo> two() throws Exception {
         return dbService.selectAllLoginInfo();
+    }
+
+    @RequestMapping(value="/username/{username}", method=RequestMethod.GET)
+    public @ResponseBody Member three(@PathVariable String username) throws Exception {
+        return userService.readUser(username);
+    }
+
+    @RequestMapping(value="/authority/{username}", method=RequestMethod.GET)
+    public @ResponseBody List<String> four(@PathVariable String username) throws Exception {
+        return userService.readAuthority(username);
     }
     
 }
