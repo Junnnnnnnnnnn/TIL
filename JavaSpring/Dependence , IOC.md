@@ -24,7 +24,7 @@ class Add{
 
 - `Calculator` 에서 인스턴스 생성한 `Add add = new Add();` 가 강한 결합 즉 **의존성**의 개념을 띈다.
 
-![](Dependence.jpg)
+![](readme/Dependence.jpg)
 
 - 계산기 class 를 인스턴스화하면 위 그림과 같이 한 계산기당 여러 객체를 인스턴스화 시켜 강한 결합을 이루고 있다.
 

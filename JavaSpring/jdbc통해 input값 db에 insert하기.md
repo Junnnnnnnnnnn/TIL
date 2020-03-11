@@ -22,7 +22,7 @@ public class SignUpRepository implements SignUpRepositoryInterface{
 }
 ```
 
-- String sql에 들어가는 `?` 는 jdbc.update(sql , 매개변수1 , 매개변수2) 매개변수에 데이터를 입력하면 자동으로 맵핑이 되어 sql에 `?` 대신 데이터가 들어간다.
+- String sql에 들어가는 `?` 는 jdbc.update(sql , 매개변수1 , 매개변수2) 매개변수에 데이터를 입력하면 자동으로 맵핑이 되어 sql에 `?` 대신 매개변수가 들어간다.
 - insert로 db에 데이터가 입력됬다면 commit을 해줘야 한다. 그러면 db에 데이터가 업데이트만 되는 것이 아니라 실제 db에 데이터가 저장이 된다.
 
 
