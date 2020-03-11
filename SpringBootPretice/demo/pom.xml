@@ -34,7 +34,6 @@
             <version>2.1.1</version>
         </dependency>
         <!--mybatis 설정-->
-
         <!--jsp 경로 및 jsp 동작-->
         <dependency>
             <groupId>javax.servlet</groupId>
