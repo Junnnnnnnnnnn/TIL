@@ -54,5 +54,9 @@ public class ProjcetController {
     public @ResponseBody List<String> four(@PathVariable String username) throws Exception {
         return userService.readAuthority(username);
     }
+    @RequestMapping(value="/user/denied", method=RequestMethod.GET)
+    public @ResponseBody String five() throws Exception {
+        return "회원가입 다시혀";
+    }
     
 }
