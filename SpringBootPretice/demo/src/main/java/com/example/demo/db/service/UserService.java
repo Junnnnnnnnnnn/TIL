@@ -21,4 +21,7 @@ public class UserService {
     public List<String> readAuthority(String username) {
         return userMapper.readAuthority(username);    
     }
+    public void insertMember(Member member){
+        userMapper.insertMember(member);
+    }
 }

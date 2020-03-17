@@ -10,5 +10,10 @@
         select authority_name from authority where username = #{username}
     </select>
 
+    <insert id="insertMember" parameterType = "member">
+        INSERT INTO `user` (`username`, `password`, `name`, `isAccountNonExpired`, `isAccountNonLocked`, `isCredentialsNonExpired`, `isEnabled`)
+        VALUES (#{username}, '#{password}', #{name}, 1, 1, 1, 1);
+    
+    </insert>
 
 </mapper>

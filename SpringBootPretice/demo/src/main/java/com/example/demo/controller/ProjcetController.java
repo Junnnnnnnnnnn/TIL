@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -35,28 +37,36 @@ public class ProjcetController {
     public String requestMethodName() throws Exception {
         return "home";
     }
-    //RESTfull api를 통해  "/2" url으로 GET 메서드가 들어왔을때 실행하는 함수이다.
-    //에러가 뜰 시 Exception을 통해 예외 처리를 해준다.
-    //@ReponseBody를 통해 return되는 값을 html body 부분에 바로 출력한다.
-    //return 타입으로 만들어 놓은 LoginInfo type을 사용했고 db에 저장되어 있는 모든 정보를 가져오는 메서드이기 때문에 List메서드도 함께 사용 해준다
-    //return 값으로 deService에 있는 메서드 selectAllLoginInfo()를 실행 시킨다.
-    @RequestMapping(value="/2", method=RequestMethod.GET)
-    public @ResponseBody List<LoginInfo> two() throws Exception {
-        return dbService.selectAllLoginInfo();
+    @RequestMapping(value="/user/upload_picture", method=RequestMethod.GET)
+    public String Upload_piString() throws Exception {
+        return "user/upload_picture";
     }
+    @RequestMapping(value = "/openapi/predict", method = RequestMethod.GET)
+    public String predict_page() throws Exception {
+        return "openapi/predict";
+    }
+    // //RESTfull api를 통해  "/2" url으로 GET 메서드가 들어왔을때 실행하는 함수이다.
+    // //에러가 뜰 시 Exception을 통해 예외 처리를 해준다.
+    // //@ReponseBody를 통해 return되는 값을 html body 부분에 바로 출력한다.
+    // //return 타입으로 만들어 놓은 LoginInfo type을 사용했고 db에 저장되어 있는 모든 정보를 가져오는 메서드이기 때문에 List메서드도 함께 사용 해준다
+    // //return 값으로 deService에 있는 메서드 selectAllLoginInfo()를 실행 시킨다.
+    // @RequestMapping(value="/2", method=RequestMethod.GET)
+    // public @ResponseBody List<LoginInfo> two() throws Exception {
+    //     return dbService.selectAllLoginInfo();
+    // }
+    
+    // @RequestMapping(value="/username/{username}", method=RequestMethod.GET)
+    // public @ResponseBody Member three(@PathVariable String username) throws Exception {
+    //     return userService.readUser(username);
+    // }
 
-    @RequestMapping(value="/username/{username}", method=RequestMethod.GET)
-    public @ResponseBody Member three(@PathVariable String username) throws Exception {
-        return userService.readUser(username);
-    }
-
-    @RequestMapping(value="/authority/{username}", method=RequestMethod.GET)
-    public @ResponseBody List<String> four(@PathVariable String username) throws Exception {
-        return userService.readAuthority(username);
-    }
-    @RequestMapping(value="/user/denied", method=RequestMethod.GET)
-    public @ResponseBody String five() throws Exception {
-        return "회원가입 다시혀";
-    }
+    // @RequestMapping(value="/authority/{username}", method=RequestMethod.GET)
+    // public @ResponseBody List<String> four(@PathVariable String username) throws Exception {
+    //     return userService.readAuthority(username);
+    // }
+    // @RequestMapping(value="/user/denied", method=RequestMethod.GET)
+    // public @ResponseBody String five() throws Exception {
+    //     return "회원가입 다시혀";
+    // }
     
 }

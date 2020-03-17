@@ -6,11 +6,6 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
-	what i eat food?
-</h1>
-<div>
-	<a href="user/upload_picture">take a picture</a>
-</div>
+    <p>predict~~</p>
 </body>
 </html>

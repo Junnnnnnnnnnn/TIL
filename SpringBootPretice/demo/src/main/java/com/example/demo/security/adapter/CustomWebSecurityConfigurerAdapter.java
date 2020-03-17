@@ -41,11 +41,10 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
     protected void configure(HttpSecurity http) throws Exception {
         //보안 문제 csrf 허용 불가
         http.csrf().disable()
-        //요청권한 해주겠다
+        //요청권한 해주겠다.
         .authorizeRequests()
-        // /2는 권한 잠겨있고
-        .antMatchers("/2").authenticated()
-        .antMatchers("/username/*").authenticated()
+        // /user 이하 파일 모두 잠겨있고
+        .antMatchers("/user/**").authenticated()
         // 그 이외는 모두 허용    
         .anyRequest().permitAll()
         //그리고 로그인을 하면
@@ -56,7 +55,6 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
         .exceptionHandling().accessDeniedPage("/user/denied");
     
     }
-
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(customUserDetailsService).passwordEncoder(passwordEncoder());

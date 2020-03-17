@@ -6,11 +6,9 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
-	what i eat food?
-</h1>
-<div>
-	<a href="user/upload_picture">take a picture</a>
-</div>
+<form action="/openapi/predict" method="GET">
+	<input type="file">
+	<input type="submit">
+</form>
 </body>
 </html>
