@@ -21,4 +21,15 @@ public class Member {
     private boolean isCredentialsNonExpired; // 계정의 패스워드가 만료되었는지를 리턴 True를 리턴하면 만료되지 않음
     private boolean isEnabled; // 계정이 사용가능한 계정인지를 리턴 True를 리턴하면 사용가능한 계정을 의미
     private Collection<? extends GrantedAuthority> authorities; // 계정이 갖고 있는 권한 목록 리턴
+
+    public Member(String username , String password , String name){
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.isAccountNonExpired = true;
+        this.isAccountNonLocked = true;
+        this.isCredentialsNonExpired = true;
+        this.isEnabled = true;
+        this.authorities = null;
+    }
 }

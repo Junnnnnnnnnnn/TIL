@@ -24,4 +24,7 @@ public class UserService {
     public void insertMember(Member member){
         userMapper.insertMember(member);
     }
+    public void insertAuth(String username , String auth){
+        userMapper.insertAuth(username, auth);
+    }
 }

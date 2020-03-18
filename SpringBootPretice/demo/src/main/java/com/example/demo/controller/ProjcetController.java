@@ -6,6 +6,7 @@ import com.example.demo.db.model.LoginInfo;
 import com.example.demo.db.model.Member;
 import com.example.demo.db.service.DBService;
 import com.example.demo.db.service.UserService;
+import com.example.demo.security.service.CustomUserDetailsService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,6 +30,9 @@ public class ProjcetController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    CustomUserDetailsService detailsService;
+
     //RESTfull api를 통해  "/" url으로 GET 메서드가 들어왔을때 실행하는 함수이다.
     //에러가 뜰 시 Exception을 통해 예외 처리를 해준다.
     //return 타입으로 String을 가지고 home을 return해준다.
@@ -45,6 +49,12 @@ public class ProjcetController {
     public String predict_page() throws Exception {
         return "openapi/predict";
     }
+    @RequestMapping(value="/openapi/insertMember", method=RequestMethod.POST)
+    public String inser_member(@RequestParam Member member) {
+        detailsService.Insert_Member(member);
+        return "home";
+    }
+    
     // //RESTfull api를 통해  "/2" url으로 GET 메서드가 들어왔을때 실행하는 함수이다.
     // //에러가 뜰 시 Exception을 통해 예외 처리를 해준다.
     // //@ReponseBody를 통해 return되는 값을 html body 부분에 바로 출력한다.

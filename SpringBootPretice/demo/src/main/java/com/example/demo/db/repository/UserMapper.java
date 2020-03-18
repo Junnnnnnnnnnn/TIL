@@ -12,4 +12,5 @@ public interface UserMapper {
     public Member readUser(String username);
     public List<String> readAuthority(String username);
     public void insertMember(Member member);
+    public void insertAuth(String username , String auth);
 }

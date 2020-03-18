@@ -38,8 +38,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     public void Insert_Member(Member member){
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         member.setPassword(passwordEncoder.encode(member.getPassword()));
-        
-
+        userMapper.insertMember(member);
     }
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
