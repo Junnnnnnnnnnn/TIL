@@ -11,9 +11,9 @@
 </h1>
 <form action="/openapi/insertMember" method="POST">
     <div>
-        id : <input type="text" placeholder="Create ID">
-        password : <input type="password" placeholder="Create password">
-        name : <input type="text" placeholder="insert your name">
+        id : <input type="text" name="id" placeholder="Create ID">
+        password : <input type="password" name="password" placeholder="Create password">
+        name : <input type="text" name="name" placeholder="insert your name">
         <input type="submit">
     </div>
 </form>

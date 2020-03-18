@@ -10,9 +10,11 @@
         select authority_name from authority where username = #{username}
     </select>
 
+    <!-- insert 구문 -->
+    <!-- id는 service에 구현된 메서드 명이고 parameterType은 Alias-package를 통해 com.example.demo.db.model.Member타입을 member로 간소화 시켰다 -->
     <insert id="insertMember" parameterType = "member">
         INSERT INTO `user` (`username`, `password`, `name`, `isAccountNonExpired`, `isAccountNonLocked`, `isCredentialsNonExpired`, `isEnabled`)
-        VALUES (#{username}, '#{password}', #{name}, 1, 1, 1, 1);    
+        VALUES (#{username ,jdbcType = VARCHAR}, #{password,jdbcType = VARCHAR}, #{name,jdbcType = VARCHAR}, 1, 1, 1, 1);    
     </insert>
 
 </mapper>

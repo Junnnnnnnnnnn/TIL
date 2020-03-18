@@ -11,7 +11,7 @@
 </h1>
 <div>
 	<a href="user/upload_picture">take a picture</a>
-	<a herf="openapi/signUp_page">sign up</a>
+	<a href="openapi/signUp_page">sign up</a>
 </div>
 </body>
 </html>

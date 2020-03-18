@@ -36,8 +36,11 @@ public class CustomUserDetailsService implements UserDetailsService {
     //없다면 Exception을 던져 준다.
     @Transactional
     public void Insert_Member(Member member){
+        //db에 비밀번호를 입력하기 전에 사용자의 보안을 위해 password를 암호화 해준다
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        //암호화된 password를 member 변수에 set해 준다
         member.setPassword(passwordEncoder.encode(member.getPassword()));
+        //userMapper에 정의 되어 있는 insert 가 실행 된다.
         userMapper.insertMember(member);
     }
     @Override

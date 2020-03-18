@@ -22,6 +22,9 @@ public class Member {
     private boolean isEnabled; // 계정이 사용가능한 계정인지를 리턴 True를 리턴하면 사용가능한 계정을 의미
     private Collection<? extends GrantedAuthority> authorities; // 계정이 갖고 있는 권한 목록 리턴
 
+
+    //회원 가입을 통해 username, password , name만 받는다면
+    //나머지 Field 변수는 초기화 되지 않기 떄문에 손수 작업 해준다.
     public Member(String username , String password , String name){
         this.username = username;
         this.password = password;
