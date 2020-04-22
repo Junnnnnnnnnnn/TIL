@@ -29,7 +29,7 @@ const odj = {
             "Content-type": "application/json; charset=UTF-8"
         } 
     };
-    //fetch를 사용할때 url과 odj로 GET ,SET 메서드를 설정해 준다.
+    //fetch를 사용할때 url과 odj로 GET ,POST 메서드를 설정해 준다.
     fetch("http://localhost:8080/testFetch", odj)
     //reponse를 가져와서
     .then(res => {
@@ -41,7 +41,7 @@ const odj = {
     })
 ```
 
-- odj는 fetch api를 사용할때 url로 보낼 부가 정보라고 생각하면 된다. 사용방법은 fetch() 메서드 두번째 파라미터로 값을 입력한다. odj가 가질 속성 중 필자가 중요하다고 생각하는 부분은 3가지 이다.
+- odj는 fetch api를 사용할때 url로 보낼 부가 정보라고 생각하면 된다. 사용방법은 fetch() 메서드 두번째 파라미터로 값으로 넣어준다. odj가 가질 속성 중 필자가 중요하다고 생각하는 부분은 3가지 이다.
   - method
     - 요청 방식중 POST 와 GET 둘 중에 하나를 사용 할 수 있다.
     - json type을 보낼 때에는 POST를 사용한다.
@@ -51,7 +51,10 @@ const odj = {
   - headers
     - 요철 할때 보내질 data의 타입을 정해놓는
     - json 타입을 보내고 싶다면 `application/json`을 입력 하면 된다
-- fetch() 메서드는 1번째 인자로 요청 url , 2번째 인자로는 odj 정보를 가진다 여기서 .then이란 요청으로 인한 응답이 왔을때 처리되야 될 로직을 구현한다.  위 코드는 `.then(res => ...)` 응답 결과가 res 변수에 초기화되고 `if(res.status == 200)` res에 status가 200(응답 정상)이라면 `res.json().then(json => console.log(json))` 응답 받은 데이터중 json이 있으면 console에 찍어라 라는 뜻입니다.
+- fetch() 메서드는 1번째 인자로 요청 url , 2번째 인자로는 odj 정보를 가진다 여기서 .then이란 요청으로 인한 응답이 왔을때 처리되야 될 로직을 구현한다. 
+  위 코드는 `.then(res => ...)` 응답 결과가 res 변수에 초기화되고 
+  `if(res.status == 200)` res에 status가 200(응답 정상)이라면 
+  `res.json().then(json => console.log(json))` 응답 받은 데이터중 json이 있으면 console에 찍어라 라는 뜻입니다.
 
 > testController.java
 

@@ -21,7 +21,7 @@ Spring 컨테이너를 실행 시키기 위한 xml파일이다.
 ```
 
 - Business Logic 에서 component 되어 있는 class를 찾기 위해 component-scan을 사용한다.
-- base-package로는 패키지 구성중 3단계 까지 지정해준다.
+- base-package로는 패키지 구성중 3단계 까지 지정해준다. ex)com.clone_trello.CT
 
 >
 >

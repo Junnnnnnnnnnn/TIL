@@ -2,11 +2,19 @@
 
 ## AWS를 사용한 이유
 
-- 클라우드 컴퓨터를 제공하는 가장 대표적인 회사가 AWS , AZURE 가 있다고 나는 생각한다. 그런데 왜 AZURE를 안쓰고 AWS를 사용했냐 하면은 지표상 전세계 클라우드 시장에서 MS ,Google , IBM 보다 AWS의 시장 점유률이 10%나 높다는 기사가 있었다. 같은 기능 같은 서비스라고 생각했을때 시장 점유율이 높은 AWS을 사용하면 더 좋다고 생각했다. [시장 점유율 관련 기사](http://www.itworld.co.kr/news/141100)
+- 클라우드 컴퓨터를 제공하는 가장 대표적인 회사가 AWS , AZURE 가 있다고 나는 생각한다. 
+
+  그런데 왜 AZURE를 안쓰고 AWS를 사용했냐 하면은 지표상 전세계 클라우드 시장에서 MS ,Google , IBM 보다 AWS의 시장 점유률이 10%나 높다는 기사가 있었다.
+
+  같은 기능 같은 서비스라고 생각했을때 시장 점유율이 높은 AWS을 사용하면 더 좋다고 생각했다. 
+
+  [시장 점유율 관련 기사](http://www.itworld.co.kr/news/141100)
 
 ## Flask를 사용한 이유
 
-- 데이터 분석 프로젝트를 배포하는 것이 주 목적이다. Web Server는 Spring FrameWork를 사용해 구축 하였고 데이터 분석을 처리할 로직들은 외부 Flask_api에 작성했다.  외부 api를 사용한 이유는 Spring과 flask는 RESTfull 한 Framework라는 장점이 있기 때문에 무거운 분석 모델을 따로 호스팅 서버에 올리고 간단히 url요청을 통해 모델을 호출해서 결과값을 가져 올수 있고, 서버에 부하를 줄일 수 있기 때문에 외부 api로 구현 해 놓았다.
+- 데이터 분석 프로젝트를 배포하는 것이 주 목적이다. Web Server는 Spring FrameWork를 사용해 구축 하였고 데이터 분석을 처리할 로직들은 외부 Flask_api에 작성했다. 
+
+  외부 api를 사용한 이유는 Spring과 flask는 RESTfull 한 Framework라는 장점이 있기 때문에 무거운 분석 모델을 따로 호스팅 서버에 올리고 url요청을 통해 모델을 호출해서 결과값을 가져 올수 있고, 서버에 부하를 줄일 수 있기 때문에 외부 api로 구현 해 놓았다.
 
 ## 구현
 
@@ -14,7 +22,7 @@
   - Ubuntu 16.04
   - RAM 1GB -> free tier
   - Storage 8GB
-- Command-Line 툴은 MobaXterm을 사용했다 왜냐하면 ubuntu 디렉토리를 GUI로 볼 수 있고, scp같이 파일을 호스트로 전송할때 터미널 작성이 아닌 **dreg & drop** 방식으로 쉽게 전송 할 수 있다.
+- Command-Line 툴은 **MobaXterm**을 사용했다 왜냐하면 **ubuntu** 디렉토리를 GUI로 볼 수 있고, **scp**같이 파일을 호스트로 전송할때 터미널 작성이 아닌 **dreg & drop** 방식으로 쉽게 전송 할 수 있다.
 
 
 
