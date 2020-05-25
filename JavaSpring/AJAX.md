@@ -79,3 +79,47 @@ $(function(){
 })
 ```
 
+#### fetch()
+
+- fetch()는 javascript ES6버전에서 나온 api로 vanila javascript 환경에서도 ajax기능을 쉽게 사용 할 수 있도록 도와준다.
+
+fetch() api의 원형은 다음과 같다
+
+```javascript
+fetch(url, obj)
+```
+
+- url은 데이터를 request 할 주소를 적는다
+- odj는 request 설정정보를 담아 준다
+
+
+
+다음 예제는 fetch() api의 대표적인 설정이다.
+
+```javascript
+let obj = {
+  method: 'GET',
+  body: JSON.stringify({userID: 0, recipeID: 123456}),
+  headers: {
+    'Content-Type': 'application/json'
+  }
+};
+fetch(url, optObj).then(function() {
+  ...
+});
+```
+
+- request 설정을 하기위한 속성(key) 값은 다음과 같다
+
+  - **method** // 사용할 메소드를 선택 (GET, POST, PUT, DELETE 등등)
+  - **headers** // 헤더에 전달할 값
+  - **body** // 바디에 전달할 값
+  - **mode** // cors 등의 값을 설정 (cors, no-cors, same-origin)
+  - **cache** // 캐쉬 사용 여부 (no-cache, reload, force-cache, only-if-cached)
+  - **credentials** // 자격 증명을 위한 옵션 설정(include, same-origin, omit) (Default. same-origin)
+
+- 위 코드는 request 설정 으로 GET 방식을 사용하고 json 타입의 userID와 recipeID를 body로 값을 넘긴다.
+
+  headers 는 json 데이터 형식으로 보내겠다는 뜻이다.
+
+- **fetch().then** 이란 **response** 통신 후 로직 처리를 하겠다는 뜻이다.
